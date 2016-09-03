@@ -30,4 +30,8 @@ public class TennisCounter {
         this.scoreA = 0;
         this.scoreB = 0;
     }
+
+    public int scoreDifferenc() {
+        return this.getScoreA() - this.getScoreB();
+    }
 }

@@ -28,6 +28,14 @@ public class TennisCounterUnitTest {
         assertEquals(0, tennisCounter.getScoreB());
     }
 
+    @Test
+    public void whenScoreAMoreThenScoreBDifferenceScoreShouldBePositive(){
+        TennisCounter tennisCounter = new TennisCounter();
+        tennisCounter.setScoreA(3);
+        tennisCounter.setScoreB(2);
+        assertEquals(1, tennisCounter.scoreDifferenc());
+    }
+
     public class MyTennisCounter extends TennisCounter{
         @Override
         public void setScoreA(int scoreA) {
