@@ -6,10 +6,10 @@ public class TennisScoreAnnouncer {
 
         String announce = "";
         if (scoreCounter.getScoreA() == 0 && scoreCounter.getScoreB() == 0){
-            announce = "LOVE-LOVE";
+            announce = describedScore(scoreCounter.getScoreA(), scoreCounter.getScoreB());
         }else if (scoreCounter.scoreDifferenc() == 0){
             if (scoreCounter.getScoreA() < 3){
-                announce = describedScore(scoreCounter.getScoreA()) + "-" + describedScore(scoreCounter.getScoreB());
+                announce = describedScore(scoreCounter.getScoreA(), scoreCounter.getScoreB());
             }else{
                 announce = "DEUCE";
             }
@@ -21,6 +21,12 @@ public class TennisScoreAnnouncer {
             announce = "B-WON";
         }
 
+        return announce;
+    }
+
+    public String describedScore(int scoreA, int scoreB) {
+        String announce;
+        announce = describedScore(scoreA) + "-" + describedScore(scoreB);
         return announce;
     }
 
