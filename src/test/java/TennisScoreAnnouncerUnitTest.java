@@ -66,5 +66,10 @@ public class TennisScoreAnnouncerUnitTest {
         tennisCounter.hitScoreA();
         assertEquals("FORTY", tennisScoreAnnouncer.describedScore(tennisCounter.getScoreA()));
     }
-}
 
+    @Test
+    public void atLeastThreePointHaveBeenScroreByEachPlayerAndScoreAreEqualShouldByDeuce(){
+        TennisScoreAnnouncer tennisScoreAnnouncer = new TennisScoreAnnouncer();
+        assertEquals("DEUCE", tennisScoreAnnouncer.announce());
+    }
+}
